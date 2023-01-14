@@ -1,0 +1,821 @@
+:root {
+  --principal: #0f5aca;
+  --blanco: #ffffff;
+  --negro: #000000;
+  --gray: #ffffff80;
+  --gray2: #f7d9d990;
+  --black1: #1a1b1f;
+  --black2: #30353b;
+  --shadow: 0 2px 3px;
+  --azul_claro: rgb(44, 205, 241);
+  --barra: rgba(242, 242, 247, 0.788);
+
+  /* scroll-behavior: smooth; Efecto scroll */
+}
+
+/* ========================================================= GLOBALES ====================================================================== */
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  /** Reset para REMS - 62.5% = 10px de 16px **/
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.centrar {
+  width: 50%;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.contenedor {
+  width: 90%;
+  max-width: 1200px; /** = 120rem **/
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 10px 0;
+  height: auto;
+}
+
+.contenedor-testimonial {
+  width: 90%;
+  max-width: 1200px; /** = 120rem **/
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 0;
+  height: auto;
+}
+
+.seccion {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.fw-300 {
+  font-weight: 300;
+}
+
+.centrar-texto {
+  text-align: center;
+}
+
+.centrar-imagen {
+  text-align: center;
+}
+
+.centrar-boton {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.contenido-centrado {
+  max-width: 80rem;
+}
+
+footer {
+  display: block;
+}
+
+/* ============================================================ Barra de navegacion ======================================================== */
+
+.barra {
+  background-color: var(--barra);
+  display: flex;
+  justify-content: space-around;
+  padding: 0 20px;
+  height: 60px; /* Tenerle esta altura, evita errores */
+}
+
+.logo {
+  width: 160px;
+  height: 35px;
+}
+
+.menu-desplegable {
+  display: none;
+  margin-left: auto; /* Pone el logo y la barra a los lados */
+  color: var(--blanco);
+  line-height: 60px; /* ← Hace que el menu-desp. tenga espacio en la barra. PD: Es lo mismo a tener: margin-top:10px */
+  font-size: 24px;
+  cursor: pointer;
+  color: var(--principal);
+}
+
+.menu-desplegable:hover {
+  color: var(--azul_claro);
+}
+
+.active {
+  font-weight: bold;
+  color: var(--principal) !important;
+  text-decoration: underline 6px !important;  
+}
+
+.active:hover {
+  color: var(--azul_claro) !important;
+}
+
+#menu {
+  margin-left: auto; /* ← Posiciona los enlaces (Inicio, nosotros, etc.) a la derecha */
+}
+
+#menu a {
+  display: inline-block;
+  position: relative; /* Posicion relativa */
+  line-height: 60px;
+  color: var(--principal);
+  font-weight: bold;
+  text-decoration: none;
+  padding: 0px /*0 arriba y abajo*/ 5px /*8 izquierda y derecha*/;
+  transition: 0.2s ease-in-out;
+  font-size: 16px;
+}
+
+#menu a:hover {
+  color: var(--azul_claro);
+}
+
+/* Todos los estilos para el menu desplegable */
+.show {
+  height: 245px !important;
+}
+
+@media (max-width: 700px) {
+  .menu-desplegable {
+    display: block;
+  }
+  #menu {
+    background: rgba(0, 0, 22, 0.9);
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    transition: 0.3s ease-out;
+  }
+  #menu {
+    display: block;
+    text-align: center;
+  }
+  #menu a {
+    color: var(--principal);
+    font-size: 20px;
+    border-bottom: 1px solid var(--principal);
+    border-top: 1px solid var(--principal);
+    width: 100%;
+  }
+}
+
+.wpp-fijo {
+  position: fixed;
+  width: 50px;
+  right: 0;
+  margin: 0 20px 20px 0;
+  bottom: 10px;
+  background-color: #22a514;
+  border-radius: 50%;
+}
+
+@media (min-width: 900px) {
+  .wpp-fijo {
+    width: 60px;
+  }
+}
+
+.wpp-mensaje {
+  color: #fff;
+  position: fixed;
+  right: 44px;
+  margin: 0 20px 20px 0;
+  padding: 5px;
+  bottom: 20px;
+  background-color: #22a514;
+  border-radius: 10px;
+}
+
+@media (min-width: 900px) {
+  .wpp-mensaje {
+    right: 54px;
+  }
+}
+
+/* ============================================================ HERO ======================================================================= */
+
+.hero {
+  width: 100%;
+  min-height: 100vh;
+  background-image: url(../img/Inicio_Fondo.jpg);
+  background-position: center center;
+  background-size: cover; /* Para que no se repita la imagen */
+  background-repeat: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center; /* y para dispositivos pequeños */
+}
+
+@media (min-width: 768px) {
+  .hero {
+    height: 900px;
+  }
+}
+
+.hero_otros {
+  background-image: url(../img/Otros_Fondo.jpg);
+  background-size: cover; /* Ocupa todo el espacio */
+  background-repeat: no-repeat; /* Es lo mismo a tener un none */
+  background-position: center center;
+  height: 30vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero_otros:hover {
+  transform-origin: right;
+}
+
+/* ================================================ MENU FIJO - JS ========================================================================= */
+
+.menu-fijo {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  background-color: var(--barra);
+}
+
+.titulo {
+  font-size: 64px;
+  font-weight: bold;
+  color: var(--blanco);
+  text-shadow: var(--shadow) var(--principal);
+}
+
+/* ======================================================== NUESTROS SERVICIOS ============================================================ */
+
+.servicios {
+  background-color: #fafafa;
+}
+
+.subtitulo {
+  font-size: 42px;
+  text-align: center;
+  color: var(--principal);
+}
+
+.copia_seccion {
+  color: var(--black2);
+  font-size: 22px;
+  line-height: 32px;
+  margin: 20px 0;
+  text-align: center;
+}
+
+@media only screen and (min-width: 768px) {
+  .contenedor_cards {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+}
+
+.card {
+  width: 100%;
+  height: 370px; /* Es mejor definirles una altura, para que sin importar la cantidad de texto, no se distorsionen */
+  padding: 20px 0;
+  overflow: hidden;
+  background: linear-gradient(180deg, #30353b 0%, #1a1b1f 100%);
+  border-radius: 10px;
+  text-align: right;
+  margin-bottom: 10px;
+  box-shadow: 0 0 2px var(--azul_claro);
+  margin-bottom: 40px;
+  border: 1px solid var(--principal);
+}
+
+@media (min-width: 900px) {
+  .card {
+    width: 31%;
+    padding: 20px 0;
+    overflow: hidden;
+    background: linear-gradient(180deg, #30353b 0%, #1a1b1f 100%);
+    border-radius: 10px;
+    text-align: right;
+    margin-bottom: 10px;
+    box-shadow: 0 0 6px var(--azul_claro);
+    margin-bottom: 30px;
+    border: 2px solid var(--principal);
+  }
+}
+
+.card_img {
+  text-align: left;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 2%;
+}
+
+.cards_texto {
+  text-align: left;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.card_lista {
+  color: var(--principal);
+  font-weight: 700;
+  margin: 25px 0 12px;
+  font-size: 25px;
+  text-decoration: none;
+}
+
+.card_titulo {
+  font-size: 15px;
+  color: var(--blanco);
+  margin-bottom: 8px;
+}
+
+.card_copia {
+  color: var(--gray2);
+  margin-bottom: 16px;
+}
+
+.card_boton {
+  display: block;
+  background: linear-gradient(
+    180deg,
+    var(--principal) 20%,
+    var(--azul_claro) 100%
+  );
+  border-radius: 6px;
+  text-decoration: none;
+  width: 100%;
+  color: var(--black1);
+  font-weight: 700;
+  text-align: center;
+  padding: 12px 0;
+}
+
+@media (min-width: 768px) {
+  .card_boton {
+    display: inline-block;
+  }
+}
+
+.soporte {
+  padding: 60px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.cadauno {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 10px;
+}
+
+.texto {
+  color: var(--black1);
+  text-align: center;
+}
+
+/* =================================================================== FOOTER ============================================================= */
+
+footer {
+  background-color: rgba(0, 0, 22, 0.9);
+  padding-top: 40px;
+  border-top: 1px solid var(--principal);
+}
+
+.site-footer .contenedor > div {
+  color: #ffffff;
+  padding: 0 20px;
+  font-size: 12px;
+}
+
+@media only screen and (min-width: 850px) {
+  .site-footer .contenedor > div {
+    width: 25%;
+    float: left;
+  }
+}
+
+.site-footer h3 {
+  color: var(--principal);
+  text-transform: uppercase;
+  font-family: "Oswald", sans-serif;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+.soluciones_footer ul li {
+  list-style: none;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.soluciones_footer a {
+  color: var(--blanco);
+  text-decoration: none;
+}
+
+.soluciones_footer a:hover {
+  color: var(--azul_claro);
+}
+
+.sobrenosotros_footer a {
+  color: var(--blanco);
+  text-decoration: none;
+}
+
+.sobrenosotros_footer a:hover {
+  color: var(--azul_claro);
+}
+
+.sobrenosotros_footer ul li {
+  list-style: none;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+.redes-sociales {
+  text-align: center;
+}
+
+/* Iconos */
+.redes-sociales i {
+  color: var(--azul_claro);
+  font-size: 24px;
+  margin-right: 15px;
+}
+
+.redes-sociales i:hover {
+  color: var(--principal);
+}
+
+/* Texto */
+.redes-sociales a {
+  font-size: 20px;
+  margin-right: 20px;
+  color: var(--blanco);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.redes-sociales a:hover {
+  cursor: pointer;
+}
+
+.redes-sociales ul li {
+  list-style: none;
+}
+
+/* Centrar todo el footer */
+@media (max-width: 850px) {
+  .footer-informacion h3 {
+    text-align: center;
+  }
+  .site-footer h3 {
+    font-size: 18px;
+  }
+  .soluciones_footer h3 {
+    text-align: center;
+    margin-top: 20px;
+  }
+  .soluciones_footer ul li {
+    text-align: center;
+  }
+  .menu h3 {
+    text-align: center;
+    margin-top: 30px;
+  }
+  .redes-sociales ul li {
+    text-align: center;
+  }
+  .sobrenosotros_footer h3 {
+    text-align: center;
+    margin-top: 10px;
+  }
+  .sobrenosotros_footer ul li {
+    text-align: center;
+  }
+}
+
+.redes-sociales {
+  text-align: left;
+}
+
+.copyright {
+  background-color: rgba(0, 0, 22, 0.9);
+  color: var(--blanco);
+  font-size: 14px;
+  padding: 30px 0;
+  margin: 20px 0 0 0;
+  text-align: center;
+  border-top: 1px solid var(--blanco);
+}
+
+/* ================================================================ NOSOTROS ============================================================== */
+
+.card-nosotros {
+  width: 100%;
+  height: 420px; /* Es mejor definirles una altura, para que sin importar la cantidad de texto, no se distorsionen */
+  overflow: hidden;
+  background: #fff;
+  text-align: right;
+  margin-bottom: 50px;
+  border: 1px solid gray;
+}
+
+@media (min-width: 900px) {
+  .card-nosotros {
+    width: 31%;
+    overflow: hidden;
+    background: #fff;
+    text-align: right;
+    margin-bottom: 10px;
+    margin-bottom: 30px;
+    border: 1px solid gray;
+  }
+}
+
+.card_img-nosotros {
+  text-align: left;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card_titulo-nosotros {
+  font-size: 15px;
+  color: gray;
+  margin-bottom: 8px;
+}
+
+/* ==================================================================== SOLUCIONES ====================================================== */
+
+.barra-solucion {
+  display: flex;
+  justify-content: space-evenly;
+  /* height: 50px; Tenerle esta altura, evita errores */
+  border-bottom: 1px solid var(--azul_claro);
+  background-color: rgba(120, 207, 226, 0.419);
+}
+
+.nav {
+  color: #fff;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+@media (min-width: 900px) {
+  .nav {
+    font-size: 15px;
+    padding: 10px 0;
+  }
+}
+
+.cada_uno:hover {
+  background-color: var(--azul_claro);
+}
+
+@media (min-width: 900px) {
+  .cada_uno {
+    color: var(--black1);
+    padding: 10px;
+    text-decoration: none;
+    margin-right: 10px;
+  }
+  .cada_uno:nth-child(6) {
+    margin: 0;
+  }
+}
+
+@media (max-width: 900px) {
+  .cada_uno {
+    color: var(--black1);
+    padding: 10px;
+    text-decoration: none;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 5px;
+    justify-content: center;
+    margin-bottom: 2px;
+  }
+  .cada_uno:nth-child(6) {
+    margin: 0;
+  }
+}
+
+.activa {
+  background-color: var(--principal);
+}
+
+.imagen {
+  text-align: center;
+  margin-top: 3px;
+}
+
+@media (min-width: 768px) {
+  .contenido-nosotros {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 2rem;
+    margin: 0 auto;
+    width: 90%;
+  }
+}
+
+.flecha {
+  /* ==== Colores de la flecha ===== */
+  background-color: var(--principal);
+  color: var(--azul_claro);
+  font-size: 250px;
+  border-radius: 50%;
+  margin: 20px;
+}
+
+.nombre {
+  margin-top: 20px;
+  text-align: center;
+  color: var(--principal);
+  font-weight: 900;
+  font-size: 3rem;
+  padding: 1rem 0 3rem 0;
+}
+
+.nombre_grande {
+  margin-top: 80px;
+  font-size: 60px;
+  text-align: center;
+  color: var(--principal);
+  font-weight: bold;
+}
+
+@media (max-width: 900px) {
+  .nombre_grande {
+    margin-top: 20px;
+    color: var(--principal);
+    font-weight: bold;
+  }
+}
+
+.info-nombre {
+  font-size: 16px;
+  padding: 5px 20px;
+  background-color: rgba(112, 198, 218, 0.727);
+}
+
+/* ============================================================= BOTONES ======================================== */
+
+.boton {
+  background-color: var(--principal);
+  padding: 10px 40px;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: var(--blanco);
+  font-weight: bold;
+  font-size: 12px;
+  margin-bottom: 4rem;
+  border-radius: 60px;
+  border-bottom: 3px solid var(--azul_claro);
+}
+
+@media (min-width: 768px) {
+  .boton {
+    background-color: var(--principal);
+    padding: 10px 40px;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--blanco);
+    font-weight: bold;
+    font-size: 12px;
+    margin-bottom: 4rem;
+    border-bottom: 3px solid var(--azul_claro);
+    border-radius: 60px;
+  }
+}
+
+.boton:hover {
+  text-decoration: none;
+  cursor: pointer;
+  transform: scale(1.1);
+  color: var(--blanco);
+  transition: all 0.5s;
+}
+
+.boton_redondo {
+  background-color: var(--principal);
+  border-radius: 60px;
+  padding: 10px;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: var(--blanco);
+  font-weight: bold;
+  font-size: 12px;
+  margin-bottom: 30px;
+}
+
+.boton_redondo:hover {
+  cursor: pointer;
+}
+
+/* ========================================================== CONTACTENOS ================================================================== */
+
+.color-azul {
+  color: var(--principal);
+}
+
+.tamaño {
+  font-size: 30px;
+  padding: 30px;
+}
+
+.contacto p {
+  font-size: 1.4rem;
+  margin: 0;
+  margin: 2rem 0 0 0;
+}
+
+legend {
+  font-size: 2.4rem;
+  padding: 0.4rem;
+}
+
+label {
+  font-weight: 700;
+  display: block;
+  padding-bottom: 10px;
+}
+
+fieldset {
+  padding: 1.5rem;
+  margin-bottom: 30px;
+}
+
+input:not([type="submit"]),
+textarea,
+select {
+  padding: 1rem;
+  background-color: #e1e1e1;
+  display: block;
+  width: 100%;
+  margin-bottom: 2rem;
+  border: none;
+  border-radius: 1rem;
+}
+
+input[type="radio"] {
+  width: auto;
+}
+
+select {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+textarea {
+  height: 20rem;
+}
+
+.forma-contacto {
+  max-width: 30rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.boton-contactenos {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto; /* Centra el botón */
+}
