@@ -33,7 +33,7 @@
         <a href="https://api.whatsapp.com/send?phone=+573003369424&text=Hola%20mi%20nombre%20es%20...%20y%20quiero%20tener%20información%20sobre%20..." target="_blank" class="wpp-fijo"><img src="img/WhatsApp_Logo.png" alt=""></a>
     </div>
 
-    <div class="hero_otros">
+    <div class="hero_contactenos">
         <div>
             <h1 class="titulo">Contáctenos</h1>
         </div>
@@ -43,20 +43,20 @@
     <main class="contenedor seccion color-azul contenido-centrado">
         <h2 class="fw-300 centrar-texto tamaño">Llena el formulario de contacto</h2>
         
-        <form class="contacto" action="">
+        <form class="contacto" action="enviar.php" method="post">
             <fieldset>
                 <legend>Información Personal</legend>
                 <label for="nombre">Nombre:</label>
-                <input type="text" id=nombre placeholder="Tu nombre:" required>
+                <input type="text" name="nombre" placeholder="Tu nombre:" required>
 
                 <label for="email">E-mail:</label>
-                <input type="email" id=email placeholder="Correo electrónico:" required>
+                <input type="email" name="email" placeholder="Correo electrónico:" required>
 
                 <label for="telefono">Teléfono:</label>
-                <input type="tel" id="telefono" placeholder="Tu teléfono:" required>
+                <input type="tel" name="telefono" placeholder="Tu teléfono:" required>
 
                 <label for="mensaje">Mensaje:</label>
-                <textarea type="tel" id=mensaje></textarea>
+                <textarea type="tel" name="mensaje"></textarea>
             </fieldset class="espacio">
 
            <div class="centrar-boton">

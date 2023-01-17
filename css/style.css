@@ -253,23 +253,6 @@ footer {
   }
 }
 
-.hero_otros {
-  background-image: url(../img/Otros_Fondo.jpg);
-  background-size: cover;
-  /* Ocupa todo el espacio */
-  background-repeat: no-repeat;
-  /* Es lo mismo a tener un none */
-  background-position: center center;
-  height: 30vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.hero_otros:hover {
-  transform-origin: right;
-}
-
 /* ================================================ MENU FIJO - JS ========================================================================= */
 
 .menu-fijo {
@@ -619,6 +602,19 @@ footer {
 
 /* ================================================================ NOSOTROS ============================================================== */
 
+.hero_nosotros {
+  background-image: url(../img/Inicio_RedesyNetworking.png);
+  background-size: cover;
+  /* Ocupa todo el espacio */
+  background-repeat: no-repeat;
+  /* Es lo mismo a tener un none */
+  background-position: center center;
+  height: 30vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .card-nosotros {
   width: 100%;
   height: 420px;
@@ -656,6 +652,19 @@ footer {
 }
 
 /* ==================================================================== SOLUCIONES ====================================================== */
+
+.hero_soluciones {
+  background-image: url(../img/Soluciones_Infraestructura.png);
+  background-size: cover;
+  /* Ocupa todo el espacio */
+  background-repeat: no-repeat;
+  /* Es lo mismo a tener un none */
+  background-position: center center;
+  height: 30vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 .card_soluciones {
   height: 520px;
@@ -768,7 +777,20 @@ footer {
   cursor: pointer;
 }
 
-/* ========================================================== CONTACTENOS ================================================================== */
+/* ========================================================== CONTÁCTENOS ================================================================== */
+
+.hero_contactenos {
+  background-image: url(../img/Startup_Two\ Color.svg);
+  background-size: cover;
+  /* Ocupa todo el espacio */
+  background-repeat: no-repeat;
+  /* Es lo mismo a tener un none */
+  background-position: center center;
+  height: 30vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 .color-azul {
   color: var(--principal);
