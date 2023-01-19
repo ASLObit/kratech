@@ -238,13 +238,11 @@ footer {
   background-image: url(../img/Inicio_Fondo.jpg);
   background-position: center center;
   background-size: cover;
-  /* Para que no se repita la imagen */
-  background-repeat: none;
+  background-repeat: none; /* Para que no se repita la imagen */ 
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align: center;
-  /* y para dispositivos pequeños */
+  text-align: center; /* y para dispositivos pequeños */
 }
 
 @media (min-width: 768px) {
@@ -603,7 +601,7 @@ footer {
 /* ================================================================ NOSOTROS ============================================================== */
 
 .hero_nosotros {
-  background-image: url(../img/Otros_Fondo.jpg);
+  background-image: url(../img/Nosotros_portada.jpg);
   background-size: cover; /* Ocupa todo el espacio */
   background-repeat: no-repeat; /* Es lo mismo a tener un none */
   background-position: center center;
@@ -651,11 +649,9 @@ footer {
 /* ==================================================================== SOLUCIONES ====================================================== */
 
 .hero_soluciones {
-  background-image: url(../img/Soluciones_Infraestructura.png);
-  background-size: cover;
-  /* Ocupa todo el espacio */
-  background-repeat: no-repeat;
-  /* Es lo mismo a tener un none */
+  background-image: url(../img/Soluciones_portada.jpg);
+  background-size: cover; /* Ocupa todo el espacio */
+  background-repeat: no-repeat; /* Es lo mismo a tener un none */
   background-position: center center;
   height: 30vw;
   display: flex;
@@ -776,7 +772,7 @@ footer {
 /* ========================================================== CONTÁCTENOS ================================================================== */
 
 .hero_contactenos {
-  background-image: url(../img/Startup_Two\ Color.svg);
+  background-image: url(../img/Contactenos_portada.jpg);
   background-size: cover; /* Ocupa todo el espacio */
   background-repeat: no-repeat; /* Es lo mismo a tener un none */
   background-position: center center;
