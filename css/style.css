@@ -45,7 +45,8 @@ body {
 
 .contenedor {
   width: 90%;
-  max-width: 1200px; /** = 120rem **/
+  max-width: 1200px;
+  /** = 120rem **/
   margin: 0 auto;
   overflow: hidden;
   padding: 10px 0;
@@ -54,7 +55,8 @@ body {
 
 .contenedor-testimonial {
   width: 90%;
-  max-width: 1200px; /** = 120rem **/
+  max-width: 1200px;
+  /** = 120rem **/
   margin: 0 auto;
   overflow: hidden;
   padding: 0;
@@ -99,7 +101,8 @@ footer {
   display: flex;
   justify-content: space-around;
   padding: 0 20px;
-  height: 60px; /* Tenerle esta altura, evita errores */
+  height: 60px;
+  /* Tenerle esta altura, evita errores */
 }
 
 .logo {
@@ -109,9 +112,11 @@ footer {
 
 .menu-desplegable {
   display: none;
-  margin-left: auto; /* Pone el logo y la barra a los lados */
+  margin-left: auto;
+  /* Pone el logo y la barra a los lados */
   color: var(--blanco);
-  line-height: 60px; /* ← Hace que el menu-desp. tenga espacio en la barra. PD: Es lo mismo a tener: margin-top:10px */
+  line-height: 60px;
+  /* ← Hace que el menu-desp. tenga espacio en la barra. PD: Es lo mismo a tener: margin-top:10px */
   font-size: 24px;
   cursor: pointer;
   color: var(--principal);
@@ -124,7 +129,7 @@ footer {
 .active {
   font-weight: bold;
   color: var(--principal) !important;
-  text-decoration: underline 6px !important;  
+  text-decoration: underline 6px !important;
 }
 
 .active:hover {
@@ -132,17 +137,23 @@ footer {
 }
 
 #menu {
-  margin-left: auto; /* ← Posiciona los enlaces (Inicio, nosotros, etc.) a la derecha */
+  margin-left: auto;
+  /* ← Posiciona los enlaces (Inicio, nosotros, etc.) a la derecha */
 }
 
 #menu a {
   display: inline-block;
-  position: relative; /* Posicion relativa */
+  position: relative;
+  /* Posicion relativa */
   line-height: 60px;
   color: var(--principal);
   font-weight: bold;
   text-decoration: none;
-  padding: 0px /*0 arriba y abajo*/ 5px /*8 izquierda y derecha*/;
+  padding: 0px
+    /*0 arriba y abajo*/
+    5px
+    /*8 izquierda y derecha*/
+  ;
   transition: 0.2s ease-in-out;
   font-size: 16px;
 }
@@ -160,6 +171,7 @@ footer {
   .menu-desplegable {
     display: block;
   }
+
   #menu {
     background: rgba(0, 0, 22, 0.9);
     position: absolute;
@@ -170,10 +182,12 @@ footer {
     overflow: hidden;
     transition: 0.3s ease-out;
   }
+
   #menu {
     display: block;
     text-align: center;
   }
+
   #menu a {
     color: var(--principal);
     font-size: 20px;
@@ -223,33 +237,20 @@ footer {
   min-height: 100vh;
   background-image: url(../img/Inicio_Fondo.jpg);
   background-position: center center;
-  background-size: cover; /* Para que no se repita la imagen */
+  background-size: cover;
+  /* Para que no se repita la imagen */
   background-repeat: none;
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align: center; /* y para dispositivos pequeños */
+  text-align: center;
+  /* y para dispositivos pequeños */
 }
 
 @media (min-width: 768px) {
   .hero {
     height: 900px;
   }
-}
-
-.hero_otros {
-  background-image: url(../img/Otros_Fondo.jpg);
-  background-size: cover; /* Ocupa todo el espacio */
-  background-repeat: no-repeat; /* Es lo mismo a tener un none */
-  background-position: center center;
-  height: 30vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.hero_otros:hover {
-  transform-origin: right;
 }
 
 /* ================================================ MENU FIJO - JS ========================================================================= */
@@ -301,7 +302,8 @@ footer {
 
 .card {
   width: 100%;
-  height: 370px; /* Es mejor definirles una altura, para que sin importar la cantidad de texto, no se distorsionen */
+  height: 370px;
+  /* Es mejor definirles una altura, para que sin importar la cantidad de texto, no se distorsionen */
   padding: 20px 0;
   overflow: hidden;
   background: linear-gradient(180deg, #30353b 0%, #1a1b1f 100%);
@@ -363,11 +365,9 @@ footer {
 
 .card_boton {
   display: block;
-  background: linear-gradient(
-    180deg,
-    var(--principal) 20%,
-    var(--azul_claro) 100%
-  );
+  background: linear-gradient(180deg,
+      var(--principal) 20%,
+      var(--azul_claro) 100%);
   border-radius: 6px;
   text-decoration: none;
   width: 100%;
@@ -383,21 +383,78 @@ footer {
   }
 }
 
+/* Tamaño celular */
 .soporte {
   padding: 60px 0;
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .cadauno {
-  width: 60px;
-  height: 60px;
-  margin-bottom: 10px;
+  width: 55%;
+  height: 90px;
 }
 
 .texto {
   color: var(--black1);
   text-align: center;
+  margin-bottom: 20px;
+  width: 50%;
+}
+
+.texto h3 {
+  margin: 15px 0 30px 0;
+}
+
+/* Tamaño tablet */
+@media (min-width: 600px) {
+  .soporte {
+      padding: 60px 0;
+      display: flex;
+      flex-wrap: wrap;
+    }
+  
+    .cadauno {
+      width: 35%;
+      height: 90px;
+    }
+  
+    .texto {
+      color: var(--black1);
+      text-align: center;
+      margin-bottom: 20px;
+      width: 50%;
+    }
+  
+    .texto h3 {
+      margin: 15px 0 30px 0;
+    }
+}
+
+/* Tamaño computador */
+@media (min-width: 1000px) {
+  .soporte {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: none;
+    flex-wrap: nowrap;
+  }
+
+  .cadauno {
+    width: 45%;
+    height: 90px;
+  }
+
+  .texto {
+    color: var(--black1);
+    text-align: center;
+    margin-bottom: 20px;
+    width: 25%;
+  }
+
+  .texto h3 {
+    margin-bottom: 0;
+  }
 }
 
 /* =================================================================== FOOTER ============================================================= */
@@ -408,14 +465,14 @@ footer {
   border-top: 1px solid var(--principal);
 }
 
-.site-footer .contenedor > div {
+.site-footer .contenedor>div {
   color: #ffffff;
   padding: 0 20px;
   font-size: 12px;
 }
 
 @media only screen and (min-width: 850px) {
-  .site-footer .contenedor > div {
+  .site-footer .contenedor>div {
     width: 25%;
     float: left;
   }
@@ -496,27 +553,34 @@ footer {
   .footer-informacion h3 {
     text-align: center;
   }
+
   .site-footer h3 {
     font-size: 18px;
   }
+
   .soluciones_footer h3 {
     text-align: center;
     margin-top: 20px;
   }
+
   .soluciones_footer ul li {
     text-align: center;
   }
+
   .menu h3 {
     text-align: center;
     margin-top: 30px;
   }
+
   .redes-sociales ul li {
     text-align: center;
   }
+
   .sobrenosotros_footer h3 {
     text-align: center;
     margin-top: 10px;
   }
+
   .sobrenosotros_footer ul li {
     text-align: center;
   }
@@ -538,9 +602,23 @@ footer {
 
 /* ================================================================ NOSOTROS ============================================================== */
 
+.hero_nosotros {
+  background-image: url(../img/Inicio_RedesyNetworking.png);
+  background-size: cover;
+  /* Ocupa todo el espacio */
+  background-repeat: no-repeat;
+  /* Es lo mismo a tener un none */
+  background-position: center center;
+  height: 30vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .card-nosotros {
   width: 100%;
-  height: 420px; /* Es mejor definirles una altura, para que sin importar la cantidad de texto, no se distorsionen */
+  height: 420px;
+  /* Es mejor definirles una altura, para que sin importar la cantidad de texto, no se distorsionen */
   overflow: hidden;
   background: #fff;
   text-align: right;
@@ -575,117 +653,68 @@ footer {
 
 /* ==================================================================== SOLUCIONES ====================================================== */
 
-.barra-solucion {
+.hero_soluciones {
+  background-image: url(../img/Soluciones_Infraestructura.png);
+  background-size: cover;
+  /* Ocupa todo el espacio */
+  background-repeat: no-repeat;
+  /* Es lo mismo a tener un none */
+  background-position: center center;
+  height: 30vw;
   display: flex;
-  justify-content: space-evenly;
-  /* height: 50px; Tenerle esta altura, evita errores */
-  border-bottom: 1px solid var(--azul_claro);
-  background-color: rgba(120, 207, 226, 0.419);
+  justify-content: center;
+  align-items: center;
 }
 
-.nav {
-  color: #fff;
-  text-decoration: none;
-  font-size: 15px;
-}
-
-@media (min-width: 900px) {
-  .nav {
-    font-size: 15px;
-    padding: 10px 0;
-  }
-}
-
-.cada_uno:hover {
-  background-color: var(--azul_claro);
-}
-
-@media (min-width: 900px) {
-  .cada_uno {
-    color: var(--black1);
-    padding: 10px;
-    text-decoration: none;
-    margin-right: 10px;
-  }
-  .cada_uno:nth-child(6) {
-    margin: 0;
-  }
-}
-
-@media (max-width: 900px) {
-  .cada_uno {
-    color: var(--black1);
-    padding: 10px;
-    text-decoration: none;
-    display: inline-block;
-    width: 100%;
-    text-align: center;
-    margin-bottom: 5px;
-    justify-content: center;
-    margin-bottom: 2px;
-  }
-  .cada_uno:nth-child(6) {
-    margin: 0;
-  }
-}
-
-.activa {
-  background-color: var(--principal);
-}
-
-.imagen {
-  text-align: center;
-  margin-top: 3px;
+.card_soluciones {
+  height: 520px;
+  /* Es mejor definirles una altura, para que sin importar la cantidad de texto, no se distorsionen */
+  padding: 30px 0;
+  overflow: hidden;
+  border-radius: 10px;
+  border: 1px solid #fff;
+  margin-bottom: 20px;
 }
 
 @media (min-width: 768px) {
-  .contenido-nosotros {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-column-gap: 2rem;
-    margin: 0 auto;
-    width: 90%;
+  .card_soluciones {
+    width: 31%;
+    padding: 30px 0;
+    overflow: hidden;
+    border-radius: 10px;
   }
 }
 
-.flecha {
-  /* ==== Colores de la flecha ===== */
-  background-color: var(--principal);
-  color: var(--azul_claro);
-  font-size: 250px;
-  border-radius: 50%;
-  margin: 20px;
+.cards_center {
+  text-align: left;
+  margin: 0 auto;
+  width: 95%;
 }
 
-.nombre {
-  margin-top: 20px;
-  text-align: center;
+.card_nombre {
+  margin-top: 10px;
+  font-size: 30px;
   color: var(--principal);
-  font-weight: 900;
-  font-size: 3rem;
-  padding: 1rem 0 3rem 0;
-}
-
-.nombre_grande {
-  margin-top: 80px;
-  font-size: 60px;
-  text-align: center;
-  color: var(--principal);
+  margin-bottom: 8px;
   font-weight: bold;
 }
 
-@media (max-width: 900px) {
-  .nombre_grande {
-    margin-top: 20px;
-    color: var(--principal);
-    font-weight: bold;
-  }
+.card_info {
+  font-size: 15px;
+  color: var(--blanco);
+  margin-bottom: 30px;
 }
 
-.info-nombre {
-  font-size: 16px;
-  padding: 5px 20px;
-  background-color: rgba(112, 198, 218, 0.727);
+.soluc_img {
+  text-align: left;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 2%;
+}
+
+.background-soluciones {
+  background-color: rgba(0, 0, 22, 0.9);
 }
 
 /* ============================================================= BOTONES ======================================== */
@@ -748,7 +777,20 @@ footer {
   cursor: pointer;
 }
 
-/* ========================================================== CONTACTENOS ================================================================== */
+/* ========================================================== CONTÁCTENOS ================================================================== */
+
+.hero_contactenos {
+  background-image: url(../img/Startup_Two\ Color.svg);
+  background-size: cover;
+  /* Ocupa todo el espacio */
+  background-repeat: no-repeat;
+  /* Es lo mismo a tener un none */
+  background-position: center center;
+  height: 30vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 .color-azul {
   color: var(--principal);
@@ -817,5 +859,6 @@ textarea {
   margin-top: 20px;
   display: flex;
   justify-content: center;
-  margin: 0 auto; /* Centra el botón */
+  margin: 0 auto;
+  /* Centra el botón */
 }
