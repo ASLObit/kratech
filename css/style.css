@@ -601,7 +601,7 @@ footer {
 /* ================================================================ NOSOTROS ============================================================== */
 
 .hero_nosotros {
-  background-image: url(../img/Nosotros_portada.jpg);
+  background-image: url(../img/Nosotros_portada.png);
   background-size: cover; /* Ocupa todo el espacio */
   background-repeat: no-repeat; /* Es lo mismo a tener un none */
   background-position: center center;
@@ -649,7 +649,7 @@ footer {
 /* ==================================================================== SOLUCIONES ====================================================== */
 
 .hero_soluciones {
-  background-image: url(../img/Soluciones_portada.jpg);
+  background-image: url(../img/Soluciones_portada.png);
   background-size: cover; /* Ocupa todo el espacio */
   background-repeat: no-repeat; /* Es lo mismo a tener un none */
   background-position: center center;
@@ -772,7 +772,7 @@ footer {
 /* ========================================================== CONTÁCTENOS ================================================================== */
 
 .hero_contactenos {
-  background-image: url(../img/Contactenos_portada.jpg);
+  background-image: url(../img/Contactenos_portada.png);
   background-size: cover; /* Ocupa todo el espacio */
   background-repeat: no-repeat; /* Es lo mismo a tener un none */
   background-position: center center;
