@@ -434,6 +434,8 @@ footer {
 
 .texto h3 {
   margin: 15px 0 30px 0;
+  font-size: 15px;
+  font-family: "Montserrat-Alternates-Medium";
 }
 
 /* Tamaño tablet */
@@ -458,6 +460,8 @@ footer {
   
     .texto h3 {
       margin: 15px 0 30px 0;
+      font-size: 15px;
+      font-family: "Montserrat-Alternates-Medium";
     }
 }
 
@@ -484,6 +488,8 @@ footer {
 
   .texto h3 {
     margin-bottom: 0;
+    font-size: 15px;
+    font-family: "Montserrat-Alternates-Medium";
   }
 }
 
@@ -510,7 +516,6 @@ footer {
 
 .site-footer h3 {
   color: var(--principal);
-  text-transform: uppercase;
   font-family: "Oswald", sans-serif;
   margin-bottom: 20px;
   font-size: 16px;
@@ -578,14 +583,15 @@ footer {
   list-style: none;
 }
 
+.site-footer h3{
+  font-family: "Montserrat-Medium";
+}
+
 /* Centrar todo el footer */
 @media (max-width: 850px) {
   .footer-informacion h3 {
-    text-align: center;
-  }
-
-  .site-footer h3 {
     font-size: 18px;
+    text-align: center;
   }
 
   .soluciones_footer h3 {
@@ -773,7 +779,6 @@ footer {
   display: block;
   text-align: center;
   text-decoration: none;
-  text-transform: uppercase;
   color: var(--blanco);
   font-weight: bold;
   font-size: 12px;
@@ -789,7 +794,6 @@ footer {
     display: inline-block;
     text-align: center;
     text-decoration: none;
-    text-transform: uppercase;
     color: var(--blanco);
     font-weight: bold;
     font-size: 12px;
@@ -814,7 +818,6 @@ footer {
   display: block;
   text-align: center;
   text-decoration: none;
-  text-transform: uppercase;
   color: var(--blanco);
   font-weight: bold;
   font-size: 12px;
