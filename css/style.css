@@ -1,3 +1,35 @@
+/* Titulo principal */
+@font-face {
+  font-family: "Montserrat-Bold";
+  src: url("../fonts/Montserrat-Bold.otf");
+}
+
+/* Subtitulos */
+@font-face {
+  font-family: "Montserrat-Medium";
+  src: url("../fonts/Montserrat-Medium.otf");
+}
+
+/* Descripción de subtitulos */
+@font-face {
+  font-family: "Montserrat-Alternates-Medium";
+  src: url("../fonts/MontserratAlternates-Medium.otf");
+}
+
+/* Letra de las tarjetas */
+@font-face {
+  font-family: "Montserrat-Thin";
+  src: url("../fonts/Montserrat-Thin.otf");
+}
+
+
+@font-face {
+  font-family: "Montserrat-ExtraLight";
+  src: url("../fonts/Montserrat-ExtraLight.otf");
+}
+
+
+
 :root {
   --principal: #0f5aca;
   --blanco: #ffffff;
@@ -149,13 +181,10 @@ footer {
   color: var(--principal);
   font-weight: bold;
   text-decoration: none;
-  padding: 0px
-    /*0 arriba y abajo*/
-    5px
-    /*8 izquierda y derecha*/
-  ;
+  padding: 0px 15px;
   transition: 0.2s ease-in-out;
-  font-size: 16px;
+  font-size: 15px;
+  font-family: Montserrat-ExtraLight;
 }
 
 #menu a:hover {
@@ -267,18 +296,17 @@ footer {
   font-weight: bold;
   color: var(--blanco);
   text-shadow: var(--shadow) var(--principal);
+  font-family: "Montserrat-Bold";
 }
 
 /* ======================================================== NUESTROS SERVICIOS ============================================================ */
 
-.servicios {
-  background-color: #fafafa;
-}
-
 .subtitulo {
+  padding: 5px;
   font-size: 42px;
   text-align: center;
   color: var(--principal);
+  font-family: "Montserrat-Medium";
 }
 
 .copia_seccion {
@@ -287,6 +315,7 @@ footer {
   line-height: 32px;
   margin: 20px 0;
   text-align: center;
+  font-family: "Montserrat-Alternates-Medium";
 }
 
 @media only screen and (min-width: 768px) {
@@ -304,7 +333,7 @@ footer {
   /* Es mejor definirles una altura, para que sin importar la cantidad de texto, no se distorsionen */
   padding: 20px 0;
   overflow: hidden;
-  background: linear-gradient(180deg, #30353b 0%, #1a1b1f 100%);
+  background: linear-gradient(180deg, #75767a 0%, #a3a5aa 100%);
   border-radius: 10px;
   text-align: right;
   margin-bottom: 10px;
@@ -318,7 +347,7 @@ footer {
     width: 31%;
     padding: 20px 0;
     overflow: hidden;
-    background: linear-gradient(180deg, #30353b 0%, #1a1b1f 100%);
+    background: linear-gradient(180deg, #75767a 0%, #a3a5aa 100%);
     border-radius: 10px;
     text-align: right;
     margin-bottom: 10px;
@@ -346,12 +375,15 @@ footer {
   color: var(--principal);
   font-weight: 700;
   margin: 25px 0 12px;
+  font-weight: bold;
   font-size: 25px;
   text-decoration: none;
+  font-family: "Montserrat-Bold";
 }
 
 .card_titulo {
-  font-size: 15px;
+  font-size: 13px;
+  font-family: "Montserrat-Thin";
   color: var(--blanco);
   margin-bottom: 8px;
 }
@@ -641,7 +673,9 @@ footer {
 }
 
 .card_titulo-nosotros {
-  font-size: 15px;
+  font-size: 13px;
+  font-family: "Montserrat-Thin";
+  text-align: justify;
   color: gray;
   margin-bottom: 8px;
 }
