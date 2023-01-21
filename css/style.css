@@ -775,7 +775,7 @@ footer {
   background-image: url(../img/Contactenos_portada.png);
   background-size: cover; /* Ocupa todo el espacio */
   background-repeat: no-repeat; /* Es lo mismo a tener un none */
-  background-position: center center;
+  background-position: top center;
   height: 20vw;
   display: flex;
   justify-content: center;
