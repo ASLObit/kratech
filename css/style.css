@@ -605,7 +605,7 @@ footer {
   background-size: cover; /* Ocupa todo el espacio */
   background-repeat: no-repeat; /* Es lo mismo a tener un none */
   background-position: center center;
-  height: 30vw;
+  height: 20vw;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -653,7 +653,7 @@ footer {
   background-size: cover; /* Ocupa todo el espacio */
   background-repeat: no-repeat; /* Es lo mismo a tener un none */
   background-position: center center;
-  height: 30vw;
+  height: 20vw;
   display: flex;
   justify-content: center;
   align-items: center;
