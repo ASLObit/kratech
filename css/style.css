@@ -124,6 +124,7 @@ body {
 
 footer {
   display: block;
+  font-family: "Montserrat-Thin";
 }
 
 /* ============================================================ Barra de navegacion ======================================================== */
@@ -339,7 +340,7 @@ footer {
   margin-bottom: 10px;
   box-shadow: 0 0 2px var(--azul_claro);
   margin-bottom: 40px;
-  border: 1px solid var(--principal);
+  border: .5px solid var(--principal);
 }
 
 @media (min-width: 900px) {
@@ -353,7 +354,7 @@ footer {
     margin-bottom: 10px;
     box-shadow: 0 0 6px var(--azul_claro);
     margin-bottom: 30px;
-    border: 2px solid var(--principal);
+    border: .5px solid var(--principal);
   }
 }
 
@@ -726,7 +727,6 @@ footer {
   padding: 30px 0;
   overflow: hidden;
   border-radius: 10px;
-  border: 1px solid #fff;
   margin-bottom: 20px;
 }
 
@@ -757,8 +757,22 @@ footer {
   font-size: 15px;
   color: var(--blanco);
   margin-bottom: 30px;
+  height: 140px;
 }
 
+.card_soluciones:nth-child(4),
+.card_soluciones:nth-child(5),
+.card_soluciones:nth-child(6)
+{
+  height: 470px;
+}
+
+.card_soluciones:nth-child(4) .card_info,
+.card_soluciones:nth-child(5) .card_info,
+.card_soluciones:nth-child(6) .card_info
+{
+  height: 95px;
+}
 .soluc_img {
   text-align: left;
   width: 100%;
@@ -850,10 +864,8 @@ footer {
   padding: 30px;
 }
 
-.contacto p {
-  font-size: 1.4rem;
-  margin: 0;
-  margin: 2rem 0 0 0;
+.contacto {
+  font-family: "Montserrat-Thin";
 }
 
 legend {
