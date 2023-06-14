@@ -802,7 +802,7 @@ footer {
   font-size: 12px;
   margin-bottom: 4rem;
   border-radius: 60px;
-  border-bottom: 3px solid var(--azul_claro);
+  border: 1px solid var(--azul_claro);
 }
 
 @media (min-width: 768px) {
@@ -928,6 +928,6 @@ textarea {
   margin-top: 20px;
   display: flex;
   justify-content: center;
-  margin: 0 auto;
-  /* Centra el botón */
+  margin: 0 auto; /* Ocupar únicamente el centro del botón */
+  font-family: "Montserrat-Thin";
 }
