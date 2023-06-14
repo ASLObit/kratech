@@ -323,6 +323,10 @@ footer {
   font-family: "Montserrat-Alternates-Medium";
 }
 
+.contenedor_cards {
+  font-family: "Montserrat-Thin";
+}
+
 @media only screen and (min-width: 768px) {
   .contenedor_cards {
     display: flex;
