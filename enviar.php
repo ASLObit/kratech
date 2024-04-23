@@ -15,7 +15,7 @@ $mensaje .= 'Teléfono de contacto: '. $phone . ' \r\n';
 $mensaje .= 'Mensaje: '. $_POST['mensaje'] . ' \r\n';
 $mensaje .= 'Enviado el: '. date('d/m/Y', time());
 
-$para = 'andres@kratech.com.co';
+$para = 'andres@kratech.co';
 $asunto = 'Correo enviado desde la web de Kratech';
 
 mail($para, $asunto, utf8_decode($mensaje), $header);
